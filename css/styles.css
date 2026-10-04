@@ -1,0 +1,288 @@
+/* ============================================================
+   ESTILOS GENERALES — Sitio Mozilla Firefox
+   Colores según orientación:
+   - Fondo página: #393C3E
+   - Fondo menú navegación: #1C6087
+   - Fondo sección contenido: #D5E6F5
+   ============================================================ */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #393C3E;
+  color: #000;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Contenedor general que agrupa todo */
+body > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- HEADER ---------- */
+.cabecera {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  min-height: 110px;
+}
+
+.titulo-sitio {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 38px;
+  color: #1C6087;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #a0c4de;
+}
+
+/* ---------- LOGO FIREFOX (hecho con CSS porque no me pinchaba la imagen) ---------- */
+.logo-firefox {
+  width: 110px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFB13D 0%, #FF7A18 45%, #E04E00 75%, #8B2E00 100%);
+  position: relative;
+  box-shadow: inset -8px -8px 20px rgba(0,0,0,0.3), 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-firefox::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #4FA8D8 0%, #1C6087 60%, #0E3A52 100%);
+}
+
+/* ---------- BARRA DECORATIVA ---------- */
+.barra-decorativa {
+  height: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #d9d9d9 45%, #888 55%, #3a3a3a 100%);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+/* ---------- CONTENEDOR PRINCIPAL (contenido + menú) ---------- */
+.contenedor-principal {
+  display: flex;
+  align-items: stretch;
+  background-color: #ffffff;
+  min-height: 420px;
+}
+
+/* ---------- CONTENIDO ---------- */
+.contenido {
+  flex: 1;
+  background-color: #D5E6F5;
+  padding: 25px 30px;
+  color: #000;
+}
+
+.contenido h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+}
+
+.contenido p {
+  text-align: justify;
+  margin-bottom: 12px;
+  font-size: 13.5px;
+}
+
+/* ---------- MENÚ LATERAL ---------- */
+.menu-lateral {
+  width: 200px;
+  background-color: #1C6087;
+  padding: 25px 15px;
+  flex-shrink: 0;
+}
+
+.menu-lateral ul {
+  list-style: none;
+}
+
+.menu-lateral li {
+  margin-bottom: 10px;
+}
+
+.menu-lateral a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.menu-lateral a:hover {
+  color: #FFD27F;
+}
+
+/* ---------- FOOTER ---------- */
+.pie {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 12px 15px;
+  font-size: 12px;
+  color: #000;
+  border-top: 3px solid #1C6087;
+}
+
+.pie a {
+  color: #1C6087;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.pie a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- FORMULARIO ---------- */
+form fieldset {
+  border: 1px solid #333;
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+
+form legend {
+  font-weight: bold;
+  padding: 0 8px;
+  color: #000;
+}
+
+.campo {
+  margin-bottom: 12px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: #000;
+}
+
+.campo input {
+  width: 220px;
+  padding: 4px 6px;
+  border: 1px solid #777;
+  font-size: 13px;
+}
+
+.campo input:focus {
+  outline: 2px solid #1C6087;
+}
+
+/* Mensajes de error (feedback sin alert) */
+.error {
+  display: block;
+  color: #C1121F;
+  font-size: 12px;
+  margin-top: 3px;
+  min-height: 14px;
+}
+
+/* Mensaje de éxito */
+.exito {
+  margin-top: 12px;
+  color: #1B7A2F;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* Botones */
+.botones {
+  margin-top: 15px;
+}
+
+.botones button {
+  padding: 5px 18px;
+  margin-right: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid #555;
+  background-color: #e9e9e9;
+}
+
+.botones button:hover {
+  background-color: #d0d0d0;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .cabecera {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .titulo-sitio {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .logo-firefox {
+    width: 80px;
+    height: 75px;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    width: 100%;
+    padding: 15px;
+    order: -1; /* pone el menú arriba en móvil */
+  }
+
+  .menu-lateral ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  .campo input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .titulo-sitio {
+    font-size: 22px;
+  }
+  .logo-firefox {
+    width: 65px;
+    height: 60px;
+  }
+  .menu-lateral ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

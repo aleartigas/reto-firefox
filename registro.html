@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de registro del sitio informativo sobre Mozilla Firefox.">
+  <meta name="keywords" content="registro, formulario, Mozilla Firefox, validación, JavaScript">
+  <meta name="author" content="Enrique Alejandro Artigas Nuñez">
+  <title>Mozilla Firefox - Formulario de registro</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="cabecera">
+    <div class="cabecera-izq">
+      <h1 class="titulo-sitio">Mozilla Firefox</h1>
+    </div>
+    <div class="cabecera-der">
+      <div class="logo-firefox" aria-label="Logo de Mozilla Firefox"></div>
+    </div>
+  </header>
+
+  <!-- BARRA DECORATIVA -->
+  <div class="barra-decorativa"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenedor-principal">
+
+    <!-- SECCIÓN DE CONTENIDO -->
+    <main class="contenido">
+      <h2>Formulario de Registro:</h2>
+
+      <form id="formulario" novalidate>
+        <fieldset>
+          <legend>Entrada de datos</legend>
+
+          <!-- Nombre -->
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            <span class="error" id="error-nombre"></span>
+          </div>
+
+          <!-- CI -->
+          <div class="campo">
+            <label for="ci">CI</label>
+            <input type="text" id="ci" name="ci">
+            <span class="error" id="error-ci"></span>
+          </div>
+
+          <!-- Contraseña -->
+          <div class="campo">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password">
+            <span class="error" id="error-password"></span>
+          </div>
+
+          <!-- Confirmación -->
+          <div class="campo">
+            <label for="confirmacion">Confirmación</label>
+            <input type="password" id="confirmacion" name="confirmacion">
+            <span class="error" id="error-confirmacion"></span>
+          </div>
+
+          <!-- Botones -->
+          <div class="botones">
+            <button type="submit">Enviar</button>
+            <button type="reset" id="btn-limpiar">Limpiar</button>
+          </div>
+
+          <!-- Mensaje de éxito -->
+          <p class="exito" id="mensaje-exito"></p>
+        </fieldset>
+      </form>
+    </main>
+
+    <!-- MENÚ LATERAL -->
+    <nav class="menu-lateral">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Formulario de registro</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="pie">
+    <p>
+      Evaluación Final realizada por
+      <a href="#">Enrique Alejandro Artigas Nuñez</a>.
+      Estándares web empleados: HTML5 y CSS3.
+    </p>
+  </footer>
+
+  <script src="js/validacion.js"></script>
+</body>
+</html>
